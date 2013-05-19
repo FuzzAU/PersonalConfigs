@@ -1,0 +1,43 @@
+[user]
+    name = Justin Young
+    email = <INSERT EMAIL>
+
+[alias]
+fa=fetch --all
+ch=checkout
+co=commit
+st=status
+rso=remote show origin
+unstage=reset --hard --
+mt=mergetool -y
+gk=!gitk --all&
+gl=log --graph --abbrev-commit --pretty=oneline --decorate
+cl=clean -dfn
+cls=clean -df
+ss=stash
+ssp=stash pop
+ssd=stash drop stash@{0}
+ssl=stash list
+dry=push --dry-run
+rhod=reset --hard origin/develop
+ffd=merge --ff-only origin/develop
+mg=merge --no-ff
+brd=branch -D
+lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[diff]
+    tool = bc3
+[difftool "bc3"]
+    cmd = /usr/bin/bcompare $LOCAL $REMOTE
+[difftool]
+    prompt = false
+[merge]
+    tool = bc3
+[mergetool "bc3"]
+    cmd = /usr/bin/bcompare $LOCAL $REMOTE $BASE $MERGED
+    trustExitCode = true
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+
