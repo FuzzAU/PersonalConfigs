@@ -16,6 +16,9 @@ set cindent
 " Turn on syntax highlighting
 syntax on
 
+" Map paste toggle to F2
+set pastetoggle=<F2>
+
 " Show line numbers
 set nu
 " Show the current command in the status bar
@@ -35,5 +38,7 @@ set smartcase
 " Turn on completion for vi commands and file lists
 set wildmenu
 
-" Load CtrlP plugin if it is available
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" Get pathogen to load all plugins
+execute pathogen#infect()
+execute pathogen#helptags()
+
