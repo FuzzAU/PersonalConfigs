@@ -7,3 +7,9 @@
 [submodule "vim/.vim/bundle/delimitMate"]
 	path = vim/.vim/bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "vim/.vim/bundle/LustyJuggler"]
+	path = vim/.vim/bundle/LustyJuggler
+	url = https://github.com/vim-scripts/LustyJuggler.git
+[submodule "vim/.vim/bundle/NERDTree"]
+	path = vim/.vim/bundle/NERDTree
+	url = https://github.com/scrooloose/nerdtree.git

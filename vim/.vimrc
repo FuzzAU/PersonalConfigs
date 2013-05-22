@@ -1,7 +1,17 @@
+set nocompatible
+filetype plugin on
+
 " Setup my favourite colour scheme
 " With 256 colour compatibility for some platforms
 set t_Co=256
 color zenburn
+
+" Get pathogen to load all plugins
+execute pathogen#infect()
+execute pathogen#helptags()
+
+" The leader key should be a ','
+let mapleader=","
 
 " Allow hidden buffers (everyone says to do this)
 set hidden
@@ -38,7 +48,14 @@ set smartcase
 " Turn on completion for vi commands and file lists
 set wildmenu
 
-" Get pathogen to load all plugins
-execute pathogen#infect()
-execute pathogen#helptags()
+" Map a simpler key for NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+" Start NERDTree if nothing else is specified
+autocmd vimenter * if !argc() | NERDTree | endif
+" If NERDTree is the only thing open, then close
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" Set up mapping for LustyJuggler 
+nmap <silent> <leader>b :LustyJuggler<CR>
+" Turn off ruby warnings
+let g:LustyJugglerSuppressRubyWarning = 1
