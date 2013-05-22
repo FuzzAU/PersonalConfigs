@@ -22,8 +22,3 @@ ln -sf $PWD/git/.gitconfig ~/.gitconfig
 # Link vim configs
 ln -sf $PWD/vim/.vimrc ~/.vimrc
 ln -sf $PWD/vim/.vim ~/.vim
-# Link pathogen to vim autostart
-ln -sf $PWD/vim/pathogen/autoload ~/.vim/autoload
-# Link vim bundles
-ln -sf $PWD/vim/bundle ~/.vim/bundle
-
