@@ -1,0 +1,9 @@
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "vim/.vim/bundle/vim-fugitive"]
+	path = vim/.vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim/bundle/delimitMate"]
+	path = vim/.vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
