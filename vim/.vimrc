@@ -51,7 +51,7 @@ set wildmenu
 " Map a simpler key for NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 " Start NERDTree if nothing else is specified
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 " If NERDTree is the only thing open, then close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
