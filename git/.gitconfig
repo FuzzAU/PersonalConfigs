@@ -41,3 +41,5 @@ lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%
     diff = auto
     status = auto
 
+[core]
+	editor = vi
