@@ -34,14 +34,14 @@ install $PWD/bash/.bashextras $BASHEXTRAS
 # We will attempt to have bash_profile load bashrc
 # If bashrc doesn't exist, then create it. It will then load the extras
 if [ `uname | grep Darwin ` ]; then
-    if ! grep -q "bashrc" $BASHPROFILE; then
+    if ! grep -sq "bashrc" $BASHPROFILE; then
         echo "source $BASHRC" >> $BASHPROFILE 
     fi
 fi
 
 # Link to extra bash stuff
 # Check first if this line is not in the bashrc
-if ! grep -q "bashextras" $BASHRC; then
+if ! grep -sq "bashextras" $BASHRC; then
     echo "source $BASHEXTRAS" >> $BASHRC 
 fi
 
