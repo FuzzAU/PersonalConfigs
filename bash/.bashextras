@@ -1,2 +1,3 @@
 # Export python startup
 export PYTHONSTARTUP=~/.pythonrc
+export EDITOR=vi
