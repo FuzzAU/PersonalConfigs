@@ -24,11 +24,11 @@ BASHRC=~/.bashrc
 # Bash profile for use with OS X
 BASHPROFILE=~/.bash_profile
 
-install $PWD/git/.gitconfig $GITCONFIG
-install $PWD/vim/.vimrc $VIMRC
+install $PWD/git/gitconfig $GITCONFIG
+install $PWD/vim/vimrc $VIMRC
 install $PWD/vim/.vim $VIMDIR
-install $PWD/python/.pythonrc $PYTHONRC
-install $PWD/bash/.bashextras $BASHEXTRAS
+install $PWD/python/pythonrc $PYTHONRC
+install $PWD/bash/bashextras $BASHEXTRAS
 
 # There is some extra work to be done on OS X because it uses bash_profile by default
 # We will attempt to have bash_profile load bashrc
