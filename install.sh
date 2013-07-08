@@ -21,12 +21,14 @@ GITCONFIG=~/.gitconfig
 PYTHONRC=~/.pythonrc
 BASHEXTRAS=~/.bashextras
 BASHRC=~/.bashrc
+TMUXCONF=~/.tmux.conf
 # Bash profile for use with OS X
 BASHPROFILE=~/.bash_profile
 
 install $PWD/git/gitconfig $GITCONFIG
 install $PWD/vim/vimrc $VIMRC
 install $PWD/vim/.vim $VIMDIR
+install $PWD/tmux/tmux.conf $TMUXCONF
 install $PWD/python/pythonrc $PYTHONRC
 install $PWD/bash/bashextras $BASHEXTRAS
 
