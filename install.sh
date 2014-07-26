@@ -24,6 +24,7 @@ BASHRC=~/.bashrc
 TMUXCONF=~/.tmux.conf
 # Bash profile for use with OS X
 BASHPROFILE=~/.bash_profile
+MACGITCOMPLETION=~/.git-completion.bash
 
 install $PWD/git/gitconfig $GITCONFIG
 install $PWD/vim/vimrc $VIMRC
