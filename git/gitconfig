@@ -1,6 +1,6 @@
 [user]
     name = Justin Young
-    email = <INSERT EMAIL>
+    email = justin@oodar.com.au 
 
 [alias]
 fa=fetch --all
@@ -26,20 +26,19 @@ brd=branch -D
 lg=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 [diff]
-    tool = bc3
-[difftool "bc3"]
-    cmd = /usr/bin/bcompare $LOCAL $REMOTE
+    tool = vimdiff 
+[difftool "vimdiff"]
+    cmd = vimdiff $LOCAL $REMOTE
 [difftool]
     prompt = false
 [merge]
-    tool = bc3
-[mergetool "bc3"]
-    cmd = /usr/bin/bcompare $LOCAL $REMOTE $BASE $MERGED
+    tool = vimdiff 
+[mergetool "vimdiff"]
+    cmd = vimdiff $LOCAL $REMOTE $BASE $MERGED
     trustExitCode = true
 [color]
     branch = auto
     diff = auto
     status = auto
-
 [core]
 	editor = vi
