@@ -20,6 +20,7 @@ VIMDIR=~/.vim
 GITCONFIG=~/.gitconfig
 PYTHONRC=~/.pythonrc
 BASHEXTRAS=~/.bashextras
+BASHPS1=~/.bashps1
 BASHRC=~/.bashrc
 TMUXCONF=~/.tmux.conf
 # Bash profile for use with OS X
@@ -32,13 +33,14 @@ install $PWD/vim/.vim $VIMDIR
 install $PWD/tmux/tmux.conf $TMUXCONF
 install $PWD/python/pythonrc $PYTHONRC
 install $PWD/bash/bashextras $BASHEXTRAS
+install $PWD/bash/ps1 $BASHPS1
 
 # There is some extra work to be done on OS X because it uses bash_profile by default
 # We will attempt to have bash_profile load bashrc
 # If bashrc doesn't exist, then create it. It will then load the extras
 if [ `uname | grep Darwin ` ]; then
     if ! grep -sq "bashrc" $BASHPROFILE; then
-        echo "source $BASHRC" >> $BASHPROFILE 
+        echo "source $BASHRC" >> $BASHPROFILE
     fi
 fi
 
