@@ -1,6 +1,10 @@
 set nocompatible
 filetype plugin on
 
+set laststatus=2
+
+let g:airline_theme="wombat"
+
 " Setup my favourite colour scheme
 " With 256 colour compatibility for some platforms
 set t_Co=256
@@ -55,7 +59,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " If NERDTree is the only thing open, then close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-" Set up mapping for LustyJuggler 
+" Set up mapping for LustyJuggler
 nmap <silent> <leader>b :LustyJuggler<CR>
 " Turn off ruby warnings
 let g:LustyJugglerSuppressRubyWarning = 1
