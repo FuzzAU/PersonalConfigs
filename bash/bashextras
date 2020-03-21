@@ -21,4 +21,3 @@ if [ `uname | grep Darwin ` ]; then
     fi
 fi
 
-source ~/.bashps1

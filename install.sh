@@ -23,6 +23,7 @@ BASHEXTRAS=~/.bashextras
 BASHPS1=~/.bashps1
 BASHRC=~/.bashrc
 TMUXCONF=~/.tmux.conf
+DIRCOLORS=~/.dircolors
 # Bash profile for use with OS X
 BASHPROFILE=~/.bash_profile
 MACGITCOMPLETION=~/.git-completion.bash
@@ -33,7 +34,8 @@ install $PWD/vim/.vim $VIMDIR
 install $PWD/tmux/tmux.conf $TMUXCONF
 install $PWD/python/pythonrc $PYTHONRC
 install $PWD/bash/bashextras $BASHEXTRAS
-install $PWD/bash/ps1 $BASHPS1
+install $PWD/bash/dircolors $DIRCOLORS
+#install $PWD/bash/ps1 $BASHPS1
 
 # There is some extra work to be done on OS X because it uses bash_profile by default
 # We will attempt to have bash_profile load bashrc
