@@ -27,10 +27,32 @@ DIRCOLORS=~/.dircolors
 # Bash profile for use with OS X
 BASHPROFILE=~/.bash_profile
 MACGITCOMPLETION=~/.git-completion.bash
+POWERLINECONFIG=~/.config/powerline
 
+## Prompt to install python3
+minimum_required=("python3" "python3-pip")
+read -p "Install python3 & pip for powerline? [Y/n]: " answer
+## Set the default value if no answer was given
+answer=${answer:Y}
+## If the answer matches y or Y, install
+[[ $answer =~ [Yy] ]] && sudo apt-get install ${minimum_required[@]}
+
+## Check to install powerline
+pip_packages=("powerline-status powerline-gitstatus")
+read -p "Install powerline? [Y/n]: " answer
+## Set the default value if no answer was given
+answer=${answer:Y}
+## If the answer matches y or Y, install
+[[ $answer =~ [Yy] ]] && pip3 install ${pip_packages[@]}
+
+# Create location for powerline
+mkdir -p ~/.config
+install $PWD/powerline/ $POWERLINECONFIG
+
+# Install configuration links
 install $PWD/git/gitconfig $GITCONFIG
-install $PWD/vim/vimrc $VIMRC
-install $PWD/vim/.vim $VIMDIR
+#install $PWD/vim/vimrc $VIMRC
+#install $PWD/vim/.vim $VIMDIR
 install $PWD/tmux/tmux.conf $TMUXCONF
 install $PWD/python/pythonrc $PYTHONRC
 install $PWD/bash/bashextras $BASHEXTRAS

@@ -5,6 +5,13 @@ export EDITOR=vi
 export TERM="xterm-256color"
 alias tmux='tmux -2'
 
+export PATH=$PATH:$HOME/.local/bin
+powerline-daemon -q
+POWERLINE_BASE_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+source $HOME/.local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
+
 if [ `uname | grep Darwin ` ]; then
     # Set colours for ls
     export CLICOLOR=1
